@@ -1,8 +1,8 @@
-import datetime.DateTimeManager
-import datetime.GreetingDateTime
+import datetime.DateTimeService
+import datetime.DateTimer
 
 fun main(args: Array<String>) {
-    val dateTimeManager = DateTimeManager()
-    val greetingDateTime = GreetingDateTime(dateTimeManager)
+    val dateTimeManager = DateTimeService()
+    val greetingDateTime = DateTimer(dateTimeManager)
     println(greetingDateTime.getNowString())
 }

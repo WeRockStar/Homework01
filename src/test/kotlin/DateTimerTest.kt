@@ -7,7 +7,7 @@ class DateTimerTest {
 
     @Test
     fun `when call getNowString() should see current datetime`() {
-        val dateTimeManager = MockDateTimeService()
+        val dateTimeManager = StubDateTimeService()
         val greetingDateTime = DateTimer(dateTimeManager);
 
         val expected = "2018/07/04_18:00:40.000"
@@ -15,7 +15,7 @@ class DateTimerTest {
         assertEquals(expected, greetingDateTime.getNowString())
     }
 
-    class MockDateTimeService : DateTimeService() {
+    class StubDateTimeService : DateTimeService() {
         override fun now() = "2018/07/04_18:00:40.000"
     }
 }

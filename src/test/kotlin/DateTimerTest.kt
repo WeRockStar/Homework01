@@ -10,7 +10,7 @@ class DateTimerTest {
     @Test
     fun `when call getNowString() should see current datetime`() {
         val dateTimeManager = StubTimeProvider()
-        val greetingDateTime = DateTimeService(dateTimeManager);
+        val greetingDateTime = DateTimeService(dateTimeManager)
 
         val expected = "2018/07/04_18:00:40.000"
 
@@ -18,7 +18,6 @@ class DateTimerTest {
     }
 
     class StubTimeProvider : ITimeProvider {
-//        override fun now() = "2018/07/04_18:00:40.000"
-        override fun current() = LocalDateTime.of(2018, 7, 4, 18, 0, 40)
+        override fun current(): LocalDateTime = LocalDateTime.of(2018, 7, 4, 18, 0, 40)
     }
 }

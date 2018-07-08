@@ -4,7 +4,7 @@ import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
-open class DateTimeService(private var timeProvider: ITimeProvider) {
+open class DateTimeService(private val timeProvider: ITimeProvider) {
 
     private val formatter by lazy { DateTimeFormatter.ofPattern("yyyy/MM/dd_HH:mm:ss.SSS") }
 
